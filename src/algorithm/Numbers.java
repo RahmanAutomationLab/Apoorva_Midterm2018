@@ -31,6 +31,7 @@ public class Numbers {
 		Sort algo = new Sort();
 		algo.selectionSort(num);
 
+		//selection Sort
 		long selectionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
         connectDB.insertDataFromArrayToMySql(num, "selection_sort", "SortingNumbers");
@@ -88,15 +89,13 @@ public class Numbers {
 
 
 //merge Sort
-		algo.mergeSort(num, findLow(num),findHigh(num));
+		algo.MergeSort(num);
 		long mergeSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in merge Sort take: " + mergeSortExecutionTime + " milli sec");
 		connectDB.insertDataFromArrayToMySql(num, "merge_sort", "SortingNumbers");
 
 		printValue(numbers);
 		randomize (num, n);
-
-
 
 
 //Shell Short

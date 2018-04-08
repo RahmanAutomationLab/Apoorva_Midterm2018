@@ -3,12 +3,8 @@ package algorithm;
 public class Sort {
 
     static long executionTime = 0;
-	/*
-	 * Please implement all the sorting algorithm. Feel free to add helper methods.
-	 * Store all the sorted data into one of the databases.
-	 */
 
-
+//Selection Sort
     public int[] selectionSort(int [] array){
         final long startTime = System.currentTimeMillis();
         int [] list = array;
@@ -30,6 +26,8 @@ public class Sort {
         System.out.println(list);
         return list;
     }
+
+    //Insertion Sort
 
     public int[] insertionSort(int [] array){
         final long startTime = System.currentTimeMillis();
@@ -55,6 +53,8 @@ public class Sort {
         return list;
     }  // end insertionSort()
 
+    //Bubble Sort
+
     public int[] bubbleSort(int [] array){
         final long startTime = System.currentTimeMillis();
         int [] list = array;
@@ -76,71 +76,64 @@ public class Sort {
 
     } // end bubbleSort()
 
-    //--------------------------------
+
+//Merge Sort
+
+public  void MergeSort(int[] array) {
+    if (array.length > 1) {
+        // split array into two halves
+        int[] left = leftHalf(array);
+        int[] right = rightHalf(array);
+
+        // recursively sort the two halves
+        MergeSort(left);
+        MergeSort(right);
+
+        // merge the sorted halves into a sorted whole
+        merge(array, left, right);
+    }
+
+}
+
+    public int[] leftHalf(int[] array) {
+        int size1 = array.length / 2;
+        int[] left = new int[size1];
+        for (int i = 0; i < size1; i++) {
+            left[i] = array[i];
+        }
+        return left;
+    }
 
 
+    public static int[] rightHalf(int[] array) {
+        int size1 = array.length / 2;
+        int size2 = array.length - size1;
+        int[] right = new int[size2];
+        for (int i = 0; i < size2; i++) {
+            right[i] = array[i + size1];
+        }
+        return right;
+    }
 
-    public int[] mergeSort(int [] array, int lowerBound,
-                                  int upperBound)
-        {
+    public  void merge(int[] result,
+    int[] left, int[] right) {
+        int i1 = 0;   // index into left array
+        int i2 = 0;   // index into right array
 
-            final long startTime = System.currentTimeMillis();
-
-            int max=0;
-            int [] workSpace = new int[max];
-            max++;
-            int [] list = array;
-
-            if(lowerBound == upperBound) // if range is 1,
-                return workSpace; // no use sorting
-            else
-            { // find midpoint
-                int mid = (lowerBound+upperBound) / 2;
-// sort low half
-                mergeSort(workSpace, lowerBound, mid);
-// sort high half
-                mergeSort(workSpace, mid+1, upperBound);
-// merge them
-                merge(list, workSpace, lowerBound, mid+1, upperBound);
-            } // end else
-            final long endTime = System.currentTimeMillis();
-            final long executionTime = endTime - startTime;
-            Sort.executionTime = executionTime;
-            return list;
-        } // end recMergeSort()
+        for (int i = 0; i < result.length; i++) {
+            if (i2 >= right.length || (i1 < left.length &&
+                    left[i1] <= right[i2])) {
+                result[i] = left[i1];    // take from left
+                i1++;
+            } else {
+                result[i] = right[i2];   // take from right
+                i2++;
+            }
+        }
+    }
 
 
-//-----------------------------------------------------------
-
-
-
-    public void merge(int[] array, int[] workSpace, int lowPtr,
-                   int highPtr, int upperBound)
-{
-    int [] list = array;
-    int j = 0; // workspace index
-    int lowerBound = lowPtr;
-    int mid = highPtr-1;
-    int n = upperBound-lowerBound+1; // # of items
-
-    while(lowPtr <= mid && highPtr <= upperBound)
-        if( list[lowPtr] < list[highPtr] )
-            workSpace[j++] = list[lowPtr++];
-        else
-            workSpace[j++] = list[highPtr++];
-    while(lowPtr <= mid)
-        workSpace[j++] = list [lowPtr++];
-    while(highPtr <= upperBound)
-        workSpace[j++] = list[highPtr++];
-    for(j=0; j<n; j++)
-        list[lowerBound+j] = workSpace[j];
-} // end merge()
-
-
-
-
-
-
+//Quick Sort
 
     public int [] quickSort(int [] array, int low, int high){
         final long startTime = System.currentTimeMillis();
@@ -173,10 +166,7 @@ public class Sort {
         return part;
     }
 
-
-
-
-
+    //Heap Sort
 
 
     public int [] heapSort(int [] array){
@@ -223,7 +213,7 @@ public class Sort {
         }
     }
 
-
+//Bucket Sort
 
 
     public int [] bucketSort(int [] array){
@@ -260,7 +250,7 @@ public class Sort {
         return max;
     }
 
-
+//Shell Sort
 
     public int [] shellSort(int [] array){
         int [] list = array;
