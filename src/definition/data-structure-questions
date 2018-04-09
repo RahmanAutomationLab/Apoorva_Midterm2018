@@ -1,9 +1,20 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
+A. Data structures are used in computing to make it easy to locate and retrieve information.
+    in object oriented programming languages like java, a class is a data structure that organizes attributes and functions in such a way that they can be easily replicated.
+
 What are the various operations that can be performed on different Data Structures?
+A. The various operations that can be performed on data structures are:
+    1. Traversing- It is used to access each data item exactly once so that it can be processed.
+    2. Searching- It is used to find out the location of the data item if it exists in the given collection of data items.
+    3. Inserting- It is used to add a new data item in the given collection of data items.
+    4. Deleting- It is used to delete an existing data item from the given collection of data items.
+    5. Sorting- It is used to arrange the data items in some order i.e. in ascending or descending order in case of numerical data and in dictionary order in case of alphanumeric data.
+    6. Merging- It is used to combine the data items of two sorted files into single file in the sorted form.
+
 List out the areas in which data structures are applied extensively?
+A. 1Compiler Design, Operating System, Database Management System, Statistical analysis package, Numerical Analysis, Graphics, Artificial Intelligence, Simulation
 what is an Array?
 what is the difference between the Array and ArrayList?
 what is LinkedList?

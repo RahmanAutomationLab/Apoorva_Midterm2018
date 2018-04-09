@@ -1,5 +1,7 @@
 package problems;
 
+import java.util.Scanner;
+
 public class Palindrome {
     public static void main(String[] args) {
         /*
@@ -7,5 +9,33 @@ public class Palindrome {
           Palindrome. So write java code to check if a given String is Palindrome or not.
          */
 
+        Scanner newscanner = new Scanner(System.in);
+        System.out.print("Check to see if a word is palindrome or not: ");
+        String word = newscanner.nextLine();
+
+
+        checkPalindrome(word);
     }
+
+
+    public static void checkPalindrome(String word){
+        String toLowerCase = word.toLowerCase();
+        String s = "";
+
+
+        for(int i = toLowerCase.length()-1; i >= 0; i--){
+            s = s + toLowerCase.charAt(i);
+        }
+        if(toLowerCase.equals(s)){
+            System.out.println("'" + word + "'" + " is a palindrome");
+        }else{
+            System.out.println("'" + word + "'" + " is not a palindrome");
+        }
+    }
+
+
+
+
+
+
 }
