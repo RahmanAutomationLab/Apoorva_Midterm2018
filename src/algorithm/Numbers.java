@@ -47,7 +47,6 @@ public class Numbers {
 
 		printValue(numbers);
 		randomize (num, n);
-		//By following above, Continue for rest of the Sorting Algorithm....
 //bubble Sort
 		algo.bubbleSort(num);
 		long bubbleSortExecutionTime = algo.executionTime;
