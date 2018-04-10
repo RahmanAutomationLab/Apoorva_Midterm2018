@@ -15,10 +15,20 @@ A. The various operations that can be performed on data structures are:
 
 List out the areas in which data structures are applied extensively?
 A. 1Compiler Design, Operating System, Database Management System, Statistical analysis package, Numerical Analysis, Graphics, Artificial Intelligence, Simulation
+
 what is an Array?
+An array  is a dynamically-created object that serves as a container to hold constant number of values of the same type.
+
 what is the difference between the Array and ArrayList?
+Arrays are static in nature. Arrays are fixed length data structures. You can’t change their size once they are created.
+Whereas, ArrayList is dynamic in nature. Its size is automatically increased if you add elements beyond its capacity.
+
 what is LinkedList?
+LinkedList is a data structure where each element consist of three things. First one is the reference to previous element, second one is the actual value of the element and last one is the reference to next element.
+
 How is an Array different from Linked List?
+
+
 what is queue?
 what is stack?
 what is FIFO and LIFO?

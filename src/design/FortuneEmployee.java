@@ -1,5 +1,10 @@
 package design;
 
+import databases.ConnectDB;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
 public class FortuneEmployee {
 
 	/**
@@ -13,10 +18,40 @@ public class FortuneEmployee {
 	 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 	 *
 	 **/
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) throws SQLException, IOException, ClassNotFoundException {
 
+		EmployeeInfo employee1 = new EmployeeInfo(101);
+
+		EmployeeInfo employee2 = new EmployeeInfo("John",102);
+
+		EmployeeInfo employee3 = new EmployeeInfo("Jason",30,103);
+
+
+
+		EmployeeInfo.nestedclass nestedrefff = employee3.new nestedclass();
+
+		nestedrefff.nestedMethod();
+
+
+
+		employee2.setName("People And Tech");
+
+		System.out.println(employee2.getName());
+
+
+
+		EmployeeInfo.calculateEmployeeBonus(10000,7);
+
+		EmployeeInfo.calculateEmployeePension(10000);
+
+
+
+		ConnectDB connection = new ConnectDB();
+
+		connection.insertProfileToMySql("employees","column1","column2");
 
 	}
+
+
 
 }
