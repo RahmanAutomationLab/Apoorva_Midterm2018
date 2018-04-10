@@ -30,7 +30,14 @@ How is an Array different from Linked List?
 
 
 what is queue?
+Java Queue interface orders the element in FIFO(First In First Out) manner. In FIFO, first element is removed first and last element is removed at last.
+Since it is an interface, we need a concrete class during its declaration. There are many ways to initialize a Queue object, most common being-
+1.	As a Priority Queue
+2.	As a LinkedList
+
 what is stack?
+Java provides an inbuilt object type called Stack. It is a collection that is based on the last in first out (LIFO) principle. On Creation, a stack is empty.
+
 what is FIFO and LIFO?
 what is the order of complexity?
 what is the best case to search an element from an array?
