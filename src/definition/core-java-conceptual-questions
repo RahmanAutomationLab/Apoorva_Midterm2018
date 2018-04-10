@@ -193,24 +193,20 @@ A.  --When an object is created its stored in the heap
 
 What is reflection in java and why is it useful?
 
-what is multithreading in java?
-
-What is the use of synchronization in Java?
-
 What is Framework?
+A. Frameworks generally refer to broad software development platforms
 
 What are the testing Framework available in java?
+A. Junit, TestNG
 
 Difference between jUnit and testNG?
+A. In jUniit methods have to be declared as static.
+   TestNG does not have this constraint.
 
 What are the dependencies for this project?
 
 what is dependency injection in java?
 
 What is static binding and dynamic binding?
-
-
-
-
-
+A. Static binding in Java occurs during compile time while dynamic binding occurs during runtime.
 
